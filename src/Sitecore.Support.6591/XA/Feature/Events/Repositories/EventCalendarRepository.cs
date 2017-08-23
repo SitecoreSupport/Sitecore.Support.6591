@@ -11,7 +11,7 @@ namespace Sitecore.Support.XA.Feature.Events.Repositories
             EventCalendarRenderingModel renderingModel = new EventCalendarRenderingModel();
             this.FillBaseProperties(renderingModel);
             renderingModel.JsonDataProperties = this.GetJsonDataProperties();
-            renderingModel.Id = new Guid().ToString();
+            renderingModel.Id = Guid.NewGuid().ToString();
             return renderingModel;
         }
     }
